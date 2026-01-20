@@ -121,8 +121,8 @@
 }
 
 .btn-danger:active:not(:disabled) {
-  background-color: #991B1B;
-  border-color: #991B1B;
+  background-color: var(--color-error-dark);
+  border-color: var(--color-error-dark);
   transform: translateY(0);
 }
 
@@ -141,8 +141,8 @@
 }
 
 .btn-success:active:not(:disabled) {
-  background-color: #065F46;
-  border-color: #065F46;
+  background-color: var(--color-secondary-800);
+  border-color: var(--color-secondary-800);
   transform: translateY(0);
 }
 

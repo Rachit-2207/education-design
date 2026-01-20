@@ -160,7 +160,7 @@ class Input {
         case 'url':
           try {
             new URL(value);
-          } catch {
+          } catch (e) {
             isValid = false;
             errorMessage = 'Please enter a valid URL';
           }
