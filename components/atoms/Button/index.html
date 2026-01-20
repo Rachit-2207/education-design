@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Component - Education Design System</title>
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="button.css">
+  <style>
+    body {
+      padding: var(--spacing-8);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--spacing-12);
+      padding: var(--spacing-6);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+    .demo-section h2 {
+      margin-bottom: var(--spacing-4);
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-default);
+      padding-bottom: var(--spacing-2);
+    }
+    .demo-section h3 {
+      margin-top: var(--spacing-6);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-4);
+      margin-bottom: var(--spacing-6);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      z-index: 1000;
+    }
+    .code-example {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-4);
+      margin-top: var(--spacing-4);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      overflow-x: auto;
+    }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-4);
+    }
+  </style>
+</head>
+<body>
+  <button class="btn btn-ghost btn-sm theme-toggle" onclick="toggleTheme()">
+    🌓 Toggle Theme
+  </button>
+
+  <h1>Button Component</h1>
+  <p class="font-content" style="color: var(--text-secondary); margin-bottom: var(--spacing-8);">
+    A comprehensive button component with multiple variants, sizes, and states for the education platform.
+  </p>
+
+  <!-- Variants -->
+  <div class="demo-section">
+    <h2>Button Variants</h2>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md">Primary Button</button>
+      <button class="btn btn-secondary btn-md">Secondary Button</button>
+      <button class="btn btn-ghost btn-md">Ghost Button</button>
+      <button class="btn btn-danger btn-md">Danger Button</button>
+      <button class="btn btn-success btn-md">Success Button</button>
+    </div>
+    <div class="code-example">
+      &lt;button class="btn btn-primary btn-md"&gt;Primary Button&lt;/button&gt;
+      &lt;button class="btn btn-secondary btn-md"&gt;Secondary Button&lt;/button&gt;
+      &lt;button class="btn btn-ghost btn-md"&gt;Ghost Button&lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="demo-section">
+    <h2>Button Sizes</h2>
+    <div class="button-group" style="align-items: center;">
+      <button class="btn btn-primary btn-sm">Small Button</button>
+      <button class="btn btn-primary btn-md">Medium Button</button>
+      <button class="btn btn-primary btn-lg">Large Button</button>
+    </div>
+    <div class="code-example">
+      &lt;button class="btn btn-primary btn-sm"&gt;Small Button&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-md"&gt;Medium Button&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-lg"&gt;Large Button&lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- States -->
+  <div class="demo-section">
+    <h2>Button States</h2>
+    
+    <h3>Default & Hover (hover over buttons)</h3>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md">Hover Me</button>
+      <button class="btn btn-secondary btn-md">Hover Me</button>
+      <button class="btn btn-ghost btn-md">Hover Me</button>
+    </div>
+
+    <h3>Disabled</h3>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md" disabled>Disabled Primary</button>
+      <button class="btn btn-secondary btn-md" disabled>Disabled Secondary</button>
+      <button class="btn btn-ghost btn-md" disabled>Disabled Ghost</button>
+    </div>
+    
+    <h3>Loading</h3>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md btn-loading">Loading</button>
+      <button class="btn btn-secondary btn-md btn-loading">Loading</button>
+      <button class="btn btn-ghost btn-md btn-loading">Loading</button>
+    </div>
+    <div class="code-example">
+      &lt;button class="btn btn-primary btn-md" disabled&gt;Disabled&lt;/button&gt;
+      &lt;button class="btn btn-primary btn-md btn-loading"&gt;Loading&lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- Icons -->
+  <div class="demo-section">
+    <h2>Buttons with Icons</h2>
+    
+    <h3>Icon Left</h3>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+        </svg>
+        Previous
+      </button>
+      <button class="btn btn-secondary btn-md">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+        </svg>
+        Enroll Course
+      </button>
+    </div>
+
+    <h3>Icon Right</h3>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md">
+        Next
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+      </button>
+      <button class="btn btn-success btn-md">
+        Complete Lesson
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </svg>
+      </button>
+    </div>
+
+    <h3>Icon Only</h3>
+    <div class="button-group" style="align-items: center;">
+      <button class="btn btn-primary btn-sm btn-icon-only" aria-label="Settings">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+        </svg>
+      </button>
+      <button class="btn btn-ghost btn-md btn-icon-only" aria-label="Search">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+      </button>
+      <button class="btn btn-danger btn-lg btn-icon-only" aria-label="Delete">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+          <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="code-example">
+      &lt;button class="btn btn-primary btn-md"&gt;
+        &lt;svg&gt;...&lt;/svg&gt;
+        Button Text
+      &lt;/button&gt;
+      &lt;button class="btn btn-primary btn-md btn-icon-only" aria-label="Settings"&gt;
+        &lt;svg&gt;...&lt;/svg&gt;
+      &lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- Full Width -->
+  <div class="demo-section">
+    <h2>Full Width Button</h2>
+    <button class="btn btn-primary btn-md btn-block">Full Width Button</button>
+    <div style="margin-top: var(--spacing-4);">
+      <button class="btn btn-secondary btn-md btn-block">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+        Start New Course
+      </button>
+    </div>
+    <div class="code-example">
+      &lt;button class="btn btn-primary btn-md btn-block"&gt;Full Width&lt;/button&gt;
+    </div>
+  </div>
+
+  <!-- Interactive Demo -->
+  <div class="demo-section">
+    <h2>Interactive Demo</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Click buttons to test JavaScript functionality
+    </p>
+    <div class="button-group">
+      <button class="btn btn-primary btn-md" id="demo-click">
+        Click Me
+      </button>
+      <button class="btn btn-secondary btn-md" id="demo-loading">
+        Simulate Loading
+      </button>
+      <button class="btn btn-ghost btn-md" id="demo-toggle">
+        Toggle Disabled
+      </button>
+    </div>
+    <div id="demo-output" style="margin-top: var(--spacing-4); padding: var(--spacing-4); background: var(--bg-tertiary); border-radius: var(--radius-md); font-family: var(--font-mono); font-size: var(--font-size-sm);">
+      Output will appear here...
+    </div>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="demo-section">
+    <h2>Accessibility Features</h2>
+    <ul style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+      <li>✓ Full keyboard navigation support</li>
+      <li>✓ ARIA labels and states</li>
+      <li>✓ Focus visible indicators</li>
+      <li>✓ Screen reader friendly</li>
+      <li>✓ Disabled state handling</li>
+      <li>✓ Loading state with aria-busy</li>
+      <li>✓ Icon-only buttons with aria-label</li>
+      <li>✓ WCAG 2.1 AA compliant color contrast</li>
+    </ul>
+  </div>
+
+  <script src="button.js"></script>
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    // Interactive Demo
+    const demoOutput = document.getElementById('demo-output');
+    
+    document.getElementById('demo-click').addEventListener('click', () => {
+      demoOutput.textContent = `Button clicked at ${new Date().toLocaleTimeString()}`;
+    });
+
+    document.getElementById('demo-loading').addEventListener('click', function() {
+      this.classList.add('btn-loading');
+      demoOutput.textContent = 'Loading started...';
+      
+      setTimeout(() => {
+        this.classList.remove('btn-loading');
+        demoOutput.textContent = 'Loading complete!';
+      }, 3000);
+    });
+
+    let isDisabled = false;
+    const toggleBtn = document.getElementById('demo-toggle');
+    toggleBtn.addEventListener('click', function() {
+      isDisabled = !isDisabled;
+      const demoClick = document.getElementById('demo-click');
+      
+      if (isDisabled) {
+        demoClick.disabled = true;
+        demoOutput.textContent = 'Click button disabled';
+      } else {
+        demoClick.disabled = false;
+        demoOutput.textContent = 'Click button enabled';
+      }
+    });
+  </script>
+</body>
+</html>

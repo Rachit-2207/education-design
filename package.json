@@ -1,0 +1,32 @@
+{
+  "name": "education-design-system",
+  "version": "1.0.0",
+  "description": "Industrial-level UI/UX design system for education platforms",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server pages -p 3000 -o",
+    "storybook": "cd storybook && npm run storybook",
+    "build:storybook": "cd storybook && npm run build-storybook",
+    "react:dev": "cd react-components && npm start",
+    "react:build": "cd react-components && npm run build"
+  },
+  "keywords": [
+    "design-system",
+    "education",
+    "ui",
+    "ux",
+    "components",
+    "react",
+    "learning-management-system",
+    "lms"
+  ],
+  "author": "Education Design Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rachit-2207/education-design.git"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

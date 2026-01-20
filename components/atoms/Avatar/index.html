@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar Component - Education Design System</title>
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="avatar.css">
+  <style>
+    body {
+      padding: var(--spacing-8);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--spacing-12);
+      padding: var(--spacing-6);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+    .demo-section h2 {
+      margin-bottom: var(--spacing-4);
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-default);
+      padding-bottom: var(--spacing-2);
+    }
+    .demo-section h3 {
+      margin-top: var(--spacing-6);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      z-index: 1000;
+    }
+    .code-example {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-4);
+      margin-top: var(--spacing-4);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      overflow-x: auto;
+    }
+    .avatar-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-4);
+      align-items: center;
+      margin: var(--spacing-4) 0;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" style="padding: var(--spacing-2) var(--spacing-3); background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-ui);" onclick="toggleTheme()">
+    🌓 Toggle Theme
+  </button>
+
+  <h1>Avatar Component</h1>
+  <p class="font-content" style="color: var(--text-secondary); margin-bottom: var(--spacing-8);">
+    Flexible avatar components for displaying user profiles, images, and identities in the education platform.
+  </p>
+
+  <!-- Sizes -->
+  <div class="demo-section">
+    <h2>Avatar Sizes</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-xs avatar-primary">
+        <span class="avatar-initials">XS</span>
+      </div>
+      <div class="avatar avatar-sm avatar-primary">
+        <span class="avatar-initials">SM</span>
+      </div>
+      <div class="avatar avatar-md avatar-primary">
+        <span class="avatar-initials">MD</span>
+      </div>
+      <div class="avatar avatar-lg avatar-primary">
+        <span class="avatar-initials">LG</span>
+      </div>
+      <div class="avatar avatar-xl avatar-primary">
+        <span class="avatar-initials">XL</span>
+      </div>
+      <div class="avatar avatar-2xl avatar-primary">
+        <span class="avatar-initials">2XL</span>
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-xs"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-sm"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-md"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-lg"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-xl"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-2xl"&gt;...&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- With Images -->
+  <div class="demo-section">
+    <h2>Avatar with Image</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-sm">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=1" alt="User avatar">
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=2" alt="User avatar">
+      </div>
+      <div class="avatar avatar-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=3" alt="User avatar">
+      </div>
+      <div class="avatar avatar-xl">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=4" alt="User avatar">
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-md"&gt;
+  &lt;img class="avatar-img" src="..." alt="User avatar"&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- With Initials -->
+  <div class="demo-section">
+    <h2>Avatar with Initials</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Different color variants for initials
+    </p>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-md avatar-primary">
+        <span class="avatar-initials">JD</span>
+      </div>
+      <div class="avatar avatar-md avatar-secondary">
+        <span class="avatar-initials">SM</span>
+      </div>
+      <div class="avatar avatar-md avatar-accent">
+        <span class="avatar-initials">AK</span>
+      </div>
+      <div class="avatar avatar-md avatar-success">
+        <span class="avatar-initials">LM</span>
+      </div>
+      <div class="avatar avatar-md avatar-warning">
+        <span class="avatar-initials">RJ</span>
+      </div>
+      <div class="avatar avatar-md avatar-error">
+        <span class="avatar-initials">TC</span>
+      </div>
+      <div class="avatar avatar-md avatar-info">
+        <span class="avatar-initials">KL</span>
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-md avatar-primary"&gt;
+  &lt;span class="avatar-initials"&gt;JD&lt;/span&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- With Icons -->
+  <div class="demo-section">
+    <h2>Avatar with Icon</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-sm avatar-primary">
+        <div class="avatar-icon">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="avatar avatar-md avatar-secondary">
+        <div class="avatar-icon">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="avatar avatar-lg avatar-info">
+        <div class="avatar-icon">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-md avatar-primary"&gt;
+  &lt;div class="avatar-icon"&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Status Indicators -->
+  <div class="demo-section">
+    <h2>Status Indicators</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=5" alt="User avatar">
+        <span class="avatar-status avatar-status-online" title="Online"></span>
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=6" alt="User avatar">
+        <span class="avatar-status avatar-status-away" title="Away"></span>
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=7" alt="User avatar">
+        <span class="avatar-status avatar-status-busy" title="Busy"></span>
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=8" alt="User avatar">
+        <span class="avatar-status avatar-status-offline" title="Offline"></span>
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-md"&gt;
+  &lt;img class="avatar-img" src="..." alt="User avatar"&gt;
+  &lt;span class="avatar-status avatar-status-online"&gt;&lt;/span&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Borders and Shadows -->
+  <div class="demo-section">
+    <h2>Borders and Shadows</h2>
+    
+    <h3>With Border</h3>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-md avatar-bordered">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=9" alt="User avatar">
+      </div>
+      <div class="avatar avatar-lg avatar-bordered">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=10" alt="User avatar">
+      </div>
+    </div>
+
+    <h3>With Shadow</h3>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-md avatar-shadow">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=11" alt="User avatar">
+      </div>
+      <div class="avatar avatar-lg avatar-shadow-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=12" alt="User avatar">
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-md avatar-bordered"&gt;...&lt;/div&gt;
+&lt;div class="avatar avatar-md avatar-shadow"&gt;...&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Shape Variants -->
+  <div class="demo-section">
+    <h2>Shape Variants</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=13" alt="Circle avatar">
+        <div style="position: absolute; bottom: -24px; font-size: 12px; color: var(--text-secondary);">Circle</div>
+      </div>
+      <div class="avatar avatar-md avatar-rounded">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=14" alt="Rounded avatar">
+        <div style="position: absolute; bottom: -24px; font-size: 12px; color: var(--text-secondary);">Rounded</div>
+      </div>
+      <div class="avatar avatar-md avatar-rounded-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=15" alt="Rounded-md avatar">
+        <div style="position: absolute; bottom: -24px; font-size: 12px; color: var(--text-secondary);">Rounded-md</div>
+      </div>
+      <div class="avatar avatar-md avatar-square">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=16" alt="Square avatar">
+        <div style="position: absolute; bottom: -24px; font-size: 12px; color: var(--text-secondary);">Square</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Avatar Group -->
+  <div class="demo-section">
+    <h2>Avatar Group</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Display multiple avatars stacked together
+    </p>
+    
+    <h3>Small Group</h3>
+    <div class="avatar-group avatar-group-sm">
+      <div class="avatar avatar-sm">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=17" alt="User 1">
+      </div>
+      <div class="avatar avatar-sm">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=18" alt="User 2">
+      </div>
+      <div class="avatar avatar-sm">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=19" alt="User 3">
+      </div>
+      <div class="avatar avatar-sm avatar-group-counter">
+        +5
+      </div>
+    </div>
+
+    <h3>Medium Group</h3>
+    <div class="avatar-group">
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=20" alt="User 1">
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=21" alt="User 2">
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=22" alt="User 3">
+      </div>
+      <div class="avatar avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=23" alt="User 4">
+      </div>
+      <div class="avatar avatar-md avatar-group-counter">
+        +12
+      </div>
+    </div>
+
+    <h3>Large Group</h3>
+    <div class="avatar-group avatar-group-lg">
+      <div class="avatar avatar-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=24" alt="User 1">
+      </div>
+      <div class="avatar avatar-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=25" alt="User 2">
+      </div>
+      <div class="avatar avatar-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=26" alt="User 3">
+      </div>
+      <div class="avatar avatar-lg avatar-group-counter">
+        +8
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar-group"&gt;
+  &lt;div class="avatar avatar-md"&gt;...&lt;/div&gt;
+  &lt;div class="avatar avatar-md"&gt;...&lt;/div&gt;
+  &lt;div class="avatar avatar-md avatar-group-counter"&gt;+5&lt;/div&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- With Notification Badge -->
+  <div class="demo-section">
+    <h2>Avatar with Notification Badge</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-notification avatar-sm">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=27" alt="User avatar">
+        <span class="avatar-notification-badge">3</span>
+      </div>
+      <div class="avatar avatar-notification avatar-md">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=28" alt="User avatar">
+        <span class="avatar-notification-badge">9</span>
+      </div>
+      <div class="avatar avatar-notification avatar-lg">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=29" alt="User avatar">
+        <span class="avatar-notification-badge">12</span>
+      </div>
+    </div>
+    <div class="code-example">
+&lt;div class="avatar avatar-notification avatar-md"&gt;
+  &lt;img class="avatar-img" src="..." alt="User avatar"&gt;
+  &lt;span class="avatar-notification-badge"&gt;9&lt;/span&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Clickable Avatar -->
+  <div class="demo-section">
+    <h2>Clickable Avatar</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Hover over avatars to see the effect
+    </p>
+    <div class="avatar-showcase">
+      <button class="avatar avatar-clickable avatar-md" role="button" aria-label="View profile">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=30" alt="User avatar">
+      </button>
+      <button class="avatar avatar-clickable avatar-bordered avatar-md" role="button" aria-label="View profile">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=31" alt="User avatar">
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div class="demo-section">
+    <h2>Loading State</h2>
+    <div class="avatar-showcase">
+      <div class="avatar avatar-sm avatar-loading"></div>
+      <div class="avatar avatar-md avatar-loading"></div>
+      <div class="avatar avatar-lg avatar-loading"></div>
+    </div>
+  </div>
+
+  <!-- Education Use Cases -->
+  <div class="demo-section">
+    <h2>Education Platform Use Cases</h2>
+    
+    <h3>Student Profile</h3>
+    <div style="display: flex; align-items: center; gap: var(--spacing-3); padding: var(--spacing-4); background: var(--bg-primary); border-radius: var(--radius-lg);">
+      <div class="avatar avatar-lg avatar-bordered">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=32" alt="Student">
+        <span class="avatar-status avatar-status-online"></span>
+      </div>
+      <div>
+        <h4 style="margin: 0; font-size: var(--font-size-lg);">Sarah Johnson</h4>
+        <p style="margin: 0; color: var(--text-secondary); font-size: var(--font-size-sm);">Computer Science Major</p>
+      </div>
+    </div>
+
+    <h3>Instructor Card</h3>
+    <div style="display: flex; align-items: center; gap: var(--spacing-3); padding: var(--spacing-4); background: var(--bg-primary); border-radius: var(--radius-lg); margin-top: var(--spacing-3);">
+      <div class="avatar avatar-xl avatar-shadow">
+        <img class="avatar-img" src="https://i.pravatar.cc/150?img=33" alt="Instructor">
+      </div>
+      <div>
+        <h4 style="margin: 0; font-size: var(--font-size-xl);">Dr. Michael Chen</h4>
+        <p style="margin: 0; color: var(--text-secondary); font-size: var(--font-size-sm);">Professor of Mathematics</p>
+        <div style="margin-top: var(--spacing-2);">
+          <span class="badge badge-primary badge-sm">Expert</span>
+          <span class="badge badge-success badge-sm">Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Study Group Members</h3>
+    <div style="padding: var(--spacing-4); background: var(--bg-primary); border-radius: var(--radius-lg); margin-top: var(--spacing-3);">
+      <p style="font-weight: var(--font-weight-medium); margin-bottom: var(--spacing-2);">Group Members</p>
+      <div class="avatar-group">
+        <div class="avatar avatar-md">
+          <img class="avatar-img" src="https://i.pravatar.cc/150?img=34" alt="Member 1">
+        </div>
+        <div class="avatar avatar-md">
+          <img class="avatar-img" src="https://i.pravatar.cc/150?img=35" alt="Member 2">
+        </div>
+        <div class="avatar avatar-md">
+          <img class="avatar-img" src="https://i.pravatar.cc/150?img=36" alt="Member 3">
+        </div>
+        <div class="avatar avatar-md">
+          <img class="avatar-img" src="https://i.pravatar.cc/150?img=37" alt="Member 4">
+        </div>
+        <div class="avatar avatar-md avatar-group-counter">
+          +6
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="demo-section">
+    <h2>Accessibility Features</h2>
+    <ul style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+      <li>✓ Alt text for all images</li>
+      <li>✓ Title attributes for status indicators</li>
+      <li>✓ ARIA labels for clickable avatars</li>
+      <li>✓ Proper role attributes</li>
+      <li>✓ Keyboard accessible (when clickable)</li>
+      <li>✓ Focus visible indicators</li>
+      <li>✓ Screen reader friendly</li>
+    </ul>
+  </div>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badge Component - Education Design System</title>
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="badge.css">
+  <style>
+    body {
+      padding: var(--spacing-8);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--spacing-12);
+      padding: var(--spacing-6);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+    .demo-section h2 {
+      margin-bottom: var(--spacing-4);
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-default);
+      padding-bottom: var(--spacing-2);
+    }
+    .demo-section h3 {
+      margin-top: var(--spacing-6);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      z-index: 1000;
+    }
+    .code-example {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-4);
+      margin-top: var(--spacing-4);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      overflow-x: auto;
+    }
+    .badge-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-3);
+      align-items: center;
+      margin: var(--spacing-4) 0;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" style="padding: var(--spacing-2) var(--spacing-3); background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-ui);" onclick="toggleTheme()">
+    🌓 Toggle Theme
+  </button>
+
+  <h1>Badge Component</h1>
+  <p class="font-content" style="color: var(--text-secondary); margin-bottom: var(--spacing-8);">
+    Versatile badge components for status indicators, labels, and notifications in the education platform.
+  </p>
+
+  <!-- Variants -->
+  <div class="demo-section">
+    <h2>Badge Variants</h2>
+    <div class="badge-showcase">
+      <span class="badge badge-default badge-md">Default</span>
+      <span class="badge badge-primary badge-md">Primary</span>
+      <span class="badge badge-secondary badge-md">Secondary</span>
+      <span class="badge badge-success badge-md">Success</span>
+      <span class="badge badge-warning badge-md">Warning</span>
+      <span class="badge badge-error badge-md">Error</span>
+      <span class="badge badge-info badge-md">Info</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-primary badge-md"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-success badge-md"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-warning badge-md"&gt;Warning&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="demo-section">
+    <h2>Badge Sizes</h2>
+    <div class="badge-showcase" style="align-items: center;">
+      <span class="badge badge-primary badge-sm">Small</span>
+      <span class="badge badge-primary badge-md">Medium</span>
+      <span class="badge badge-primary badge-lg">Large</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-primary badge-sm"&gt;Small&lt;/span&gt;
+&lt;span class="badge badge-primary badge-md"&gt;Medium&lt;/span&gt;
+&lt;span class="badge badge-primary badge-lg"&gt;Large&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Solid Variants -->
+  <div class="demo-section">
+    <h2>Solid Badges</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Solid variants provide stronger visual emphasis
+    </p>
+    <div class="badge-showcase">
+      <span class="badge badge-solid badge-primary badge-md">Primary</span>
+      <span class="badge badge-solid badge-secondary badge-md">Secondary</span>
+      <span class="badge badge-solid badge-success badge-md">Success</span>
+      <span class="badge badge-solid badge-warning badge-md">Warning</span>
+      <span class="badge badge-solid badge-error badge-md">Error</span>
+      <span class="badge badge-solid badge-info badge-md">Info</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-solid badge-primary badge-md"&gt;Primary&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Outlined Variants -->
+  <div class="demo-section">
+    <h2>Outlined Badges</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Outlined variants for subtle emphasis
+    </p>
+    <div class="badge-showcase">
+      <span class="badge badge-outlined badge-primary badge-md">Primary</span>
+      <span class="badge badge-outlined badge-success badge-md">Success</span>
+      <span class="badge badge-outlined badge-warning badge-md">Warning</span>
+      <span class="badge badge-outlined badge-error badge-md">Error</span>
+      <span class="badge badge-outlined badge-info badge-md">Info</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-outlined badge-primary badge-md"&gt;Primary&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Dot Indicator -->
+  <div class="demo-section">
+    <h2>Badges with Dot Indicator</h2>
+    <div class="badge-showcase">
+      <span class="badge badge-dot badge-primary badge-md">Online</span>
+      <span class="badge badge-dot badge-success badge-md">Active</span>
+      <span class="badge badge-dot badge-warning badge-md">Pending</span>
+      <span class="badge badge-dot badge-error badge-md">Offline</span>
+      <span class="badge badge-dot badge-info badge-md">In Progress</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-dot badge-success badge-md"&gt;Active&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- With Icons -->
+  <div class="demo-section">
+    <h2>Badges with Icons</h2>
+    <div class="badge-showcase">
+      <span class="badge badge-primary badge-md">
+        <svg class="badge-icon" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </svg>
+        Information
+      </span>
+      <span class="badge badge-success badge-md">
+        <svg class="badge-icon" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </svg>
+        Completed
+      </span>
+      <span class="badge badge-warning badge-md">
+        <svg class="badge-icon" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+        Warning
+      </span>
+      <span class="badge badge-error badge-md">
+        <svg class="badge-icon" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+        Error
+      </span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-success badge-md"&gt;
+  &lt;svg class="badge-icon"&gt;...&lt;/svg&gt;
+  Completed
+&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Closable Badges -->
+  <div class="demo-section">
+    <h2>Closable Badges</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Click the × button to remove badges
+    </p>
+    <div class="badge-showcase" id="closable-demo">
+      <span class="badge badge-primary badge-md badge-closable">
+        JavaScript
+        <button class="badge-close" aria-label="Remove JavaScript badge" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge-secondary badge-md badge-closable">
+        Python
+        <button class="badge-close" aria-label="Remove Python badge" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge-info badge-md badge-closable">
+        React
+        <button class="badge-close" aria-label="Remove React badge" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-primary badge-md badge-closable"&gt;
+  JavaScript
+  &lt;button class="badge-close" aria-label="Remove badge"&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Numeric Badges -->
+  <div class="demo-section">
+    <h2>Numeric Badges</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      Perfect for notification counts
+    </p>
+    <div class="badge-showcase" style="align-items: center;">
+      <span class="badge badge-numeric badge-solid badge-error badge-sm">3</span>
+      <span class="badge badge-numeric badge-solid badge-error badge-md">12</span>
+      <span class="badge badge-numeric badge-solid badge-error badge-lg">99+</span>
+      <span class="badge badge-numeric badge-solid badge-primary badge-md">5</span>
+      <span class="badge badge-numeric badge-solid badge-info badge-md">New</span>
+    </div>
+    <div class="code-example">
+&lt;span class="badge badge-numeric badge-solid badge-error badge-md"&gt;12&lt;/span&gt;
+    </div>
+  </div>
+
+  <!-- Pill Badges -->
+  <div class="demo-section">
+    <h2>Pill Badges</h2>
+    <div class="badge-showcase">
+      <span class="badge badge-pill badge-primary badge-md">Beginner</span>
+      <span class="badge badge-pill badge-warning badge-md">Intermediate</span>
+      <span class="badge badge-pill badge-error badge-md">Advanced</span>
+      <span class="badge badge-pill badge-success badge-md">Completed</span>
+    </div>
+  </div>
+
+  <!-- Pulsing Badge -->
+  <div class="demo-section">
+    <h2>Pulsing Badge</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      For drawing attention to important notifications
+    </p>
+    <div class="badge-showcase">
+      <span class="badge badge-solid badge-error badge-md badge-pulse badge-numeric">3</span>
+      <span class="badge badge-solid badge-primary badge-md badge-pulse">Live</span>
+      <span class="badge badge-solid badge-warning badge-md badge-pulse">New</span>
+    </div>
+  </div>
+
+  <!-- Education Use Cases -->
+  <div class="demo-section">
+    <h2>Education Platform Use Cases</h2>
+    
+    <h3>Course Status</h3>
+    <div class="badge-showcase">
+      <span class="badge badge-success badge-md">
+        <svg class="badge-icon" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </svg>
+        Enrolled
+      </span>
+      <span class="badge badge-dot badge-warning badge-md">In Progress</span>
+      <span class="badge badge-dot badge-success badge-md">Completed</span>
+      <span class="badge badge-info badge-md">Not Started</span>
+    </div>
+
+    <h3>Assignment Status</h3>
+    <div class="badge-showcase">
+      <span class="badge badge-outlined badge-warning badge-md">Due Soon</span>
+      <span class="badge badge-error badge-md">Overdue</span>
+      <span class="badge badge-success badge-md">Submitted</span>
+      <span class="badge badge-solid badge-success badge-md">Graded</span>
+    </div>
+
+    <h3>Skill Level Tags</h3>
+    <div class="badge-showcase">
+      <span class="badge badge-pill badge-success badge-sm">Beginner</span>
+      <span class="badge badge-pill badge-primary badge-sm">Intermediate</span>
+      <span class="badge badge-pill badge-warning badge-sm">Advanced</span>
+      <span class="badge badge-pill badge-error badge-sm">Expert</span>
+    </div>
+
+    <h3>Course Categories</h3>
+    <div class="badge-showcase">
+      <span class="badge badge-primary badge-md badge-closable">
+        Web Development
+        <button class="badge-close" aria-label="Remove tag" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge-secondary badge-md badge-closable">
+        Data Science
+        <button class="badge-close" aria-label="Remove tag" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+      <span class="badge badge-info badge-md badge-closable">
+        Design
+        <button class="badge-close" aria-label="Remove tag" onclick="this.parentElement.remove()">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+      </span>
+    </div>
+
+    <h3>Notifications</h3>
+    <div style="display: flex; gap: var(--spacing-4); align-items: center;">
+      <div style="position: relative; display: inline-block;">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+        </svg>
+        <span class="badge badge-numeric badge-solid badge-error badge-sm" style="position: absolute; top: -8px; right: -8px;">5</span>
+      </div>
+      <div style="position: relative; display: inline-block;">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+        </svg>
+        <span class="badge badge-numeric badge-solid badge-error badge-sm badge-pulse" style="position: absolute; top: -8px; right: -8px;">12</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="demo-section">
+    <h2>Accessibility Features</h2>
+    <ul style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+      <li>✓ Semantic HTML with appropriate ARIA labels</li>
+      <li>✓ Close buttons have descriptive aria-label</li>
+      <li>✓ Sufficient color contrast (WCAG 2.1 AA)</li>
+      <li>✓ Keyboard accessible close buttons</li>
+      <li>✓ Focus visible indicators</li>
+      <li>✓ Screen reader friendly</li>
+    </ul>
+  </div>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>

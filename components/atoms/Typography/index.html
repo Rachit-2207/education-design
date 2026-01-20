@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Component - Education Design System</title>
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="typography.css">
+  <style>
+    body {
+      padding: var(--spacing-8);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--spacing-12);
+      padding: var(--spacing-6);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+    .demo-section h2 {
+      margin-bottom: var(--spacing-4);
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-default);
+      padding-bottom: var(--spacing-2);
+    }
+    .demo-section h3 {
+      margin-top: var(--spacing-6);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      z-index: 1000;
+    }
+    .code-example {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-4);
+      margin-top: var(--spacing-4);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      overflow-x: auto;
+    }
+    .typography-sample {
+      padding: var(--spacing-4);
+      background: var(--bg-primary);
+      border-radius: var(--radius-md);
+      margin: var(--spacing-3) 0;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" style="padding: var(--spacing-2) var(--spacing-3); background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-ui);" onclick="toggleTheme()">
+    🌓 Toggle Theme
+  </button>
+
+  <h1>Typography Component</h1>
+  <p class="font-content" style="color: var(--text-secondary); margin-bottom: var(--spacing-8);">
+    A comprehensive typography system for the education platform with headings, body text, and utility classes.
+  </p>
+
+  <!-- Display & Headings -->
+  <div class="demo-section">
+    <h2>Display & Headings</h2>
+    
+    <div class="typography-sample">
+      <h1 class="display-heading">Display Heading</h1>
+    </div>
+
+    <div class="typography-sample">
+      <h1 class="heading-1">Heading 1 - Main Page Title</h1>
+    </div>
+
+    <div class="typography-sample">
+      <h2 class="heading-2">Heading 2 - Section Title</h2>
+    </div>
+
+    <div class="typography-sample">
+      <h3 class="heading-3">Heading 3 - Subsection Title</h3>
+    </div>
+
+    <div class="typography-sample">
+      <h4 class="heading-4">Heading 4 - Card Title</h4>
+    </div>
+
+    <div class="typography-sample">
+      <h5 class="heading-5">Heading 5 - Small Section</h5>
+    </div>
+
+    <div class="typography-sample">
+      <h6 class="heading-6">Heading 6 - Minor Heading</h6>
+    </div>
+
+    <div class="code-example">
+&lt;h1 class="display-heading"&gt;Display Heading&lt;/h1&gt;
+&lt;h1 class="heading-1"&gt;Heading 1&lt;/h1&gt;
+&lt;h2 class="heading-2"&gt;Heading 2&lt;/h2&gt;
+    </div>
+  </div>
+
+  <!-- Body Text -->
+  <div class="demo-section">
+    <h2>Body Text</h2>
+    
+    <div class="typography-sample">
+      <p class="lead-text">
+        This is lead text used for introductory paragraphs. It's larger and lighter to draw attention without overwhelming the reader.
+      </p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="body-xl">
+        Body XL text is used for important content that needs more emphasis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="body-lg">
+        Body Large text is perfect for longer content sections where readability is important. This size is comfortable for extended reading.
+      </p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="body-base">
+        Body Base is the standard text size used throughout the application. It provides optimal readability for most content types and is the most commonly used text style.
+      </p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="body-sm">
+        Body Small is used for secondary information, captions, and supporting text. It's still readable but takes up less visual space.
+      </p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="body-xs">
+        Body XS is the smallest body text size, used for fine print, timestamps, and minimal supporting information.
+      </p>
+    </div>
+  </div>
+
+  <!-- UI Text -->
+  <div class="demo-section">
+    <h2>UI Text</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      UI text uses the system font for interface elements like buttons, labels, and forms.
+    </p>
+
+    <div class="typography-sample">
+      <p class="ui-text-lg">UI Text Large - Button text, prominent labels</p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="ui-text-base">UI Text Base - Form labels, navigation</p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="ui-text-sm">UI Text Small - Helper text, metadata</p>
+    </div>
+
+    <div class="typography-sample">
+      <p class="ui-text-xs">UI Text XS - Fine print, timestamps</p>
+    </div>
+  </div>
+
+  <!-- Specialty Text -->
+  <div class="demo-section">
+    <h2>Specialty Text Styles</h2>
+
+    <h3>Subtitle</h3>
+    <div class="typography-sample">
+      <p class="subtitle">Supporting text that provides context to headings</p>
+    </div>
+
+    <h3>Caption</h3>
+    <div class="typography-sample">
+      <p class="caption">Image captions, small annotations, and metadata</p>
+    </div>
+
+    <h3>Overline</h3>
+    <div class="typography-sample">
+      <p class="overline">Category Label</p>
+    </div>
+
+    <h3>Code (Inline)</h3>
+    <div class="typography-sample">
+      <p class="body-base">Use <code class="code-inline">const variable = value;</code> for declarations.</p>
+    </div>
+
+    <h3>Code Block</h3>
+    <div class="typography-sample">
+      <pre class="code-block">function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return true;
+}</pre>
+    </div>
+
+    <h3>Blockquote</h3>
+    <div class="typography-sample">
+      <blockquote class="blockquote">
+        Education is the most powerful weapon which you can use to change the world.
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Font Weights -->
+  <div class="demo-section">
+    <h2>Font Weights</h2>
+    <div class="typography-sample">
+      <p class="body-base font-light">Light weight (300)</p>
+      <p class="body-base font-normal">Normal weight (400)</p>
+      <p class="body-base font-medium">Medium weight (500)</p>
+      <p class="body-base font-semibold">Semibold weight (600)</p>
+      <p class="body-base font-bold">Bold weight (700)</p>
+    </div>
+  </div>
+
+  <!-- Text Colors -->
+  <div class="demo-section">
+    <h2>Text Colors</h2>
+    <div class="typography-sample">
+      <p class="body-base text-primary">Primary text color</p>
+      <p class="body-base text-secondary">Secondary text color</p>
+      <p class="body-base text-tertiary">Tertiary text color</p>
+      <p class="body-base text-brand-primary">Brand primary color</p>
+      <p class="body-base text-success">Success color</p>
+      <p class="body-base text-warning">Warning color</p>
+      <p class="body-base text-error">Error color</p>
+      <p class="body-base text-info">Info color</p>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="demo-section">
+    <h2>Links</h2>
+    <div class="typography-sample">
+      <p class="body-base">
+        This is a <a href="#" class="link">standard link</a> in text.
+      </p>
+      <p class="body-base">
+        This is an <a href="#" class="link link-underline">underlined link</a> in text.
+      </p>
+      <p class="body-base">
+        This is a <a href="#" class="link link-muted">muted link</a> that's less prominent.
+      </p>
+    </div>
+  </div>
+
+  <!-- Text Utilities -->
+  <div class="demo-section">
+    <h2>Text Utilities</h2>
+
+    <h3>Alignment</h3>
+    <div class="typography-sample">
+      <p class="body-base text-left">Left aligned text</p>
+      <p class="body-base text-center">Center aligned text</p>
+      <p class="body-base text-right">Right aligned text</p>
+    </div>
+
+    <h3>Transform</h3>
+    <div class="typography-sample">
+      <p class="body-base text-uppercase">Uppercase text</p>
+      <p class="body-base text-lowercase">LOWERCASE TEXT</p>
+      <p class="body-base text-capitalize">capitalize each word</p>
+    </div>
+
+    <h3>Decoration</h3>
+    <div class="typography-sample">
+      <p class="body-base text-underline">Underlined text</p>
+      <p class="body-base text-line-through">Strikethrough text</p>
+    </div>
+
+    <h3>Truncation</h3>
+    <div class="typography-sample" style="max-width: 300px;">
+      <p class="body-base text-truncate">
+        This is a very long text that will be truncated with an ellipsis when it exceeds the container width
+      </p>
+    </div>
+
+    <div class="typography-sample" style="max-width: 300px;">
+      <p class="body-base text-truncate-2">
+        This is a longer text that will be truncated after two lines. It demonstrates the multi-line truncation utility which is useful for card descriptions and previews.
+      </p>
+    </div>
+
+    <h3>Highlight</h3>
+    <div class="typography-sample">
+      <p class="body-base">
+        This text has a <span class="text-highlight">highlighted portion</span> for emphasis.
+      </p>
+    </div>
+  </div>
+
+  <!-- Education Use Cases -->
+  <div class="demo-section">
+    <h2>Education Platform Use Cases</h2>
+
+    <h3>Course Title</h3>
+    <div class="typography-sample">
+      <h1 class="heading-1">Introduction to Web Development</h1>
+      <p class="subtitle">Master HTML, CSS, and JavaScript</p>
+      <p class="overline">Computer Science</p>
+    </div>
+
+    <h3>Lesson Content</h3>
+    <div class="typography-sample">
+      <h2 class="heading-3">Chapter 1: Getting Started</h2>
+      <p class="lead-text">
+        In this chapter, you'll learn the fundamentals of web development and set up your development environment.
+      </p>
+      <p class="body-base paragraph">
+        Web development is the process of creating websites and web applications. It encompasses everything from building simple static pages to complex web-based applications, social network services, and electronic business applications.
+      </p>
+      <p class="body-base paragraph">
+        Modern web development typically involves three main technologies: HTML for structure, CSS for styling, and JavaScript for interactivity.
+      </p>
+    </div>
+
+    <h3>Assignment Instructions</h3>
+    <div class="typography-sample">
+      <h3 class="heading-4">Assignment 1: Build Your First Web Page</h3>
+      <p class="caption">Due: October 15, 2024</p>
+      <p class="body-base paragraph">
+        Create a personal portfolio page using HTML and CSS. Your page should include:
+      </p>
+      <ul class="body-base" style="margin-left: var(--spacing-6);">
+        <li>A header with your name</li>
+        <li>An about section</li>
+        <li>A projects section</li>
+        <li>A contact form</li>
+      </ul>
+    </div>
+
+    <h3>Code Example</h3>
+    <div class="typography-sample">
+      <h4 class="heading-5">HTML Structure Example</h4>
+      <pre class="code-block">&lt;div class="container"&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/div&gt;</pre>
+      <p class="caption">Example HTML structure for a basic webpage</p>
+    </div>
+
+    <h3>Course Quote</h3>
+    <div class="typography-sample">
+      <blockquote class="blockquote">
+        The beautiful thing about learning is that no one can take it away from you.
+      </blockquote>
+      <p class="caption">— B.B. King</p>
+    </div>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="demo-section">
+    <h2>Accessibility Features</h2>
+    <ul style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+      <li>✓ Semantic HTML structure with proper heading hierarchy</li>
+      <li>✓ Sufficient color contrast (WCAG 2.1 AA compliant)</li>
+      <li>✓ Responsive font sizing</li>
+      <li>✓ Readable line lengths and spacing</li>
+      <li>✓ Clear link styles with hover states</li>
+      <li>✓ Focus visible indicators</li>
+      <li>✓ Screen reader friendly</li>
+    </ul>
+  </div>
+
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>
