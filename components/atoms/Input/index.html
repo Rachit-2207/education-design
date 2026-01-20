@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Component - Education Design System</title>
+  <link rel="stylesheet" href="../../../assets/css/base.css">
+  <link rel="stylesheet" href="input.css">
+  <style>
+    body {
+      padding: var(--spacing-8);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--spacing-12);
+      padding: var(--spacing-6);
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+    .demo-section h2 {
+      margin-bottom: var(--spacing-4);
+      color: var(--text-primary);
+      border-bottom: 2px solid var(--border-default);
+      padding-bottom: var(--spacing-2);
+    }
+    .demo-section h3 {
+      margin-top: var(--spacing-6);
+      margin-bottom: var(--spacing-3);
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: var(--spacing-4);
+      right: var(--spacing-4);
+      z-index: 1000;
+    }
+    .code-example {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-4);
+      margin-top: var(--spacing-4);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      overflow-x: auto;
+    }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-6);
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" style="padding: var(--spacing-2) var(--spacing-3); background: var(--bg-secondary); border: 1px solid var(--border-default); border-radius: var(--radius-md); cursor: pointer; font-family: var(--font-ui);" onclick="toggleTheme()">
+    🌓 Toggle Theme
+  </button>
+
+  <h1>Input Component</h1>
+  <p class="font-content" style="color: var(--text-secondary); margin-bottom: var(--spacing-8);">
+    Accessible and versatile input components for forms in the education platform.
+  </p>
+
+  <!-- Basic Inputs -->
+  <div class="demo-section">
+    <h2>Basic Input Types</h2>
+    
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="text-input">Text Input</label>
+        <div class="input-wrapper">
+          <input type="text" id="text-input" class="input input-md" placeholder="Enter text...">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="email-input">Email Input</label>
+        <div class="input-wrapper">
+          <input type="email" id="email-input" class="input input-md" placeholder="name@example.com">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="password-input">Password Input</label>
+        <div class="input-wrapper">
+          <input type="password" id="password-input" class="input input-md" placeholder="Enter password...">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="number-input">Number Input</label>
+        <div class="input-wrapper">
+          <input type="number" id="number-input" class="input input-md" placeholder="0">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="search-input">Search Input</label>
+        <div class="input-wrapper">
+          <input type="search" id="search-input" class="input input-md input-search" placeholder="Search courses...">
+        </div>
+      </div>
+    </div>
+    
+    <div class="code-example">
+&lt;div class="input-group"&gt;
+  &lt;label class="input-label" for="text-input"&gt;Text Input&lt;/label&gt;
+  &lt;div class="input-wrapper"&gt;
+    &lt;input type="text" class="input input-md" placeholder="Enter text..."&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <!-- Input Sizes -->
+  <div class="demo-section">
+    <h2>Input Sizes</h2>
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="input-sm">Small Input</label>
+        <div class="input-wrapper">
+          <input type="text" id="input-sm" class="input input-sm" placeholder="Small input">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="input-md">Medium Input</label>
+        <div class="input-wrapper">
+          <input type="text" id="input-md" class="input input-md" placeholder="Medium input">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="input-lg">Large Input</label>
+        <div class="input-wrapper">
+          <input type="text" id="input-lg" class="input input-lg" placeholder="Large input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input States -->
+  <div class="demo-section">
+    <h2>Input States</h2>
+    
+    <h3>Default & Focus (click to focus)</h3>
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="default-input">Default State</label>
+        <div class="input-wrapper">
+          <input type="text" id="default-input" class="input input-md" placeholder="Click to focus">
+        </div>
+      </div>
+    </div>
+
+    <h3>Disabled</h3>
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="disabled-input">Disabled Input</label>
+        <div class="input-wrapper">
+          <input type="text" id="disabled-input" class="input input-md" placeholder="Cannot edit" value="Disabled value" disabled>
+        </div>
+      </div>
+    </div>
+
+    <h3>Error State</h3>
+    <div class="demo-grid">
+      <div class="input-group input-group-error">
+        <label class="input-label" for="error-input">Email Address</label>
+        <div class="input-wrapper">
+          <input type="email" id="error-input" class="input input-md input-error" value="invalid-email" aria-invalid="true">
+        </div>
+        <div class="input-error-text" role="alert">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+          </svg>
+          Please enter a valid email address
+        </div>
+      </div>
+    </div>
+
+    <h3>Success State</h3>
+    <div class="demo-grid">
+      <div class="input-group input-group-success">
+        <label class="input-label" for="success-input">Username</label>
+        <div class="input-wrapper">
+          <input type="text" id="success-input" class="input input-md input-success" value="johndoe">
+        </div>
+        <div class="input-success-text">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </svg>
+          Username is available
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Icons -->
+  <div class="demo-section">
+    <h2>Inputs with Icons</h2>
+    
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="icon-left">Icon Left</label>
+        <div class="input-wrapper">
+          <input type="text" id="icon-left" class="input input-md input-icon-left" placeholder="Search...">
+          <span class="input-icon input-icon-left-pos">
+            <svg fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="icon-right">Icon Right</label>
+        <div class="input-wrapper">
+          <input type="email" id="icon-right" class="input input-md input-icon-right" placeholder="Email address">
+          <span class="input-icon input-icon-right-pos">
+            <svg fill="currentColor" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Special Features -->
+  <div class="demo-section">
+    <h2>Special Features</h2>
+    
+    <h3>Password with Toggle</h3>
+    <div class="input-group">
+      <label class="input-label" for="password-toggle">Password</label>
+      <div class="input-wrapper">
+        <input type="password" id="password-toggle" class="input input-md" placeholder="Enter password..." value="mypassword123">
+      </div>
+      <div class="input-helper-text">Click the eye icon to show/hide password</div>
+    </div>
+
+    <h3>Input with Clear Button</h3>
+    <div class="input-group">
+      <label class="input-label" for="clearable-input">Course Name</label>
+      <div class="input-wrapper">
+        <input type="text" id="clearable-input" class="input input-md" placeholder="Type something..." value="Introduction to JavaScript" data-clearable>
+      </div>
+      <div class="input-helper-text">Hover or focus to see clear button</div>
+    </div>
+
+    <h3>Input with Character Count</h3>
+    <div class="input-group">
+      <label class="input-label" for="char-count-input">Bio</label>
+      <div class="input-wrapper">
+        <textarea id="char-count-input" class="input input-md" placeholder="Tell us about yourself..." data-maxlength="150">I'm a passionate educator...</textarea>
+      </div>
+    </div>
+
+    <h3>Required Field</h3>
+    <div class="input-group">
+      <label class="input-label" for="required-input">
+        Full Name
+        <span class="input-label-required">*</span>
+      </label>
+      <div class="input-wrapper">
+        <input type="text" id="required-input" class="input input-md" placeholder="Enter your full name" required data-validate="text">
+      </div>
+      <div class="input-helper-text">This field is required</div>
+    </div>
+  </div>
+
+  <!-- Validation -->
+  <div class="demo-section">
+    <h2>Real-time Validation</h2>
+    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-4);">
+      These inputs validate on blur and show real-time feedback
+    </p>
+    
+    <div class="demo-grid">
+      <div class="input-group">
+        <label class="input-label" for="validate-email">
+          Email Address
+          <span class="input-label-required">*</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="email" id="validate-email" class="input input-md" placeholder="name@example.com" required data-validate="email">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="validate-number">
+          Age
+          <span class="input-label-required">*</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="text" id="validate-number" class="input input-md" placeholder="18" required data-validate="number">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="demo-section">
+    <h2>Textarea</h2>
+    <div class="input-group">
+      <label class="input-label" for="textarea-input">Course Description</label>
+      <div class="input-wrapper">
+        <textarea id="textarea-input" class="input input-md" placeholder="Describe your course..."></textarea>
+      </div>
+      <div class="input-helper-text">Provide a detailed description of your course content and objectives</div>
+    </div>
+  </div>
+
+  <!-- Accessibility -->
+  <div class="demo-section">
+    <h2>Accessibility Features</h2>
+    <ul style="color: var(--text-secondary); line-height: var(--line-height-relaxed);">
+      <li>✓ Proper label associations with for/id attributes</li>
+      <li>✓ ARIA labels for icon-only buttons</li>
+      <li>✓ aria-invalid for error states</li>
+      <li>✓ role="alert" for error messages</li>
+      <li>✓ Clear focus indicators</li>
+      <li>✓ Keyboard navigation support</li>
+      <li>✓ Screen reader friendly helper text</li>
+      <li>✓ Required field indicators</li>
+      <li>✓ WCAG 2.1 AA compliant</li>
+    </ul>
+  </div>
+
+  <script src="input.js"></script>
+  <script>
+    // Theme Toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  </script>
+</body>
+</html>
